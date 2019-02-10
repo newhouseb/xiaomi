@@ -9,5 +9,4 @@ do
   sleep 1
 done
 
-
-bash first_input.sh
+# bash first_input.sh

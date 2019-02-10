@@ -33,7 +33,7 @@ echo "up" | /home/pi/hid_gadget_test /dev/hidg0 keyboard
 sleep 0.1
 
 # It takes a second for the inputs to load
-sleep 0.5 
+sleep 1.0 
 
 echo "down" | /home/pi/hid_gadget_test /dev/hidg0 keyboard
 sleep 0.1
