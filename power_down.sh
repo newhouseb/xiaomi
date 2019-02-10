@@ -1,8 +1,8 @@
 #!/bin/bash
-adb disconnect 192.168.1.196
-adb connect 192.168.1.196
+
+# We sadly need ADB to hit the power button
+bash connect_adb.sh
+
+adb shell input keyevent 26 # Power button
 sleep 1
-echo "tx 10:44:02" | cec-client RPI -s -d 4 # Down
-echo "tx 10:44:04" | cec-client RPI -s -d 4 # Right
-echo "tx 10:44:2b" | cec-client RPI -s -d 4 # Enter
-adb shell reboot -p
+echo "enter" | /home/pi/hid_gadget_test /dev/hidg0 keyboard
